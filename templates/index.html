@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PocketCalc — clean mobile calculator</title>
+
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <main class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">∑</div>
+        <div class="title">PocketCalc</div>
+      </div>
+
+      <div class="controls">
+        <button id="themeBtn" class="icon-btn">🌙</button>
+        <button id="historyBtn" class="icon-btn">🕘</button>
+      </div>
+    </header>
+
+    <section class="screen-area">
+      <div class="expression" id="expression"></div>
+      <div class="result" id="result">0</div>
+    </section>
+
+    <section class="kbd-area">
+      <div class="row">
+        <button class="btn op" data-val="(">(</button>
+        <button class="btn op" data-val=")">)</button>
+        <button class="btn op" data-val="%">%</button>
+        <button class="btn op" data-val="CE">CE</button>
+      </div>
+
+      <div class="row">
+        <button class="btn num" data-val="7">7</button>
+        <button class="btn num" data-val="8">8</button>
+        <button class="btn num" data-val="9">9</button>
+        <button class="btn op" data-val="/">÷</button>
+      </div>
+
+      <div class="row">
+        <button class="btn num" data-val="4">4</button>
+        <button class="btn num" data-val="5">5</button>
+        <button class="btn num" data-val="6">6</button>
+        <button class="btn op" data-val="*">×</button>
+      </div>
+
+      <div class="row">
+        <button class="btn num" data-val="1">1</button>
+        <button class="btn num" data-val="2">2</button>
+        <button class="btn num" data-val="3">3</button>
+        <button class="btn op" data-val="-">−</button>
+      </div>
+
+      <div class="row">
+        <button class="btn num" data-val="0">0</button>
+        <button class="btn num" data-val=".">.</button>
+        <button class="btn op" data-val="back">⌫</button>
+        <button class="btn op eq" data-val="=">=</button>
+      </div>
+    </section>
+
+    <aside id="history" class="history hidden">
+      <div class="history-header">
+        <strong>History</strong>
+        <button id="clearHistory" class="small-btn">Clear</button>
+      </div>
+      <ul id="historyList" class="history-list"></ul>
+    </aside>
+
+  </main>
+
+  
+  <footer class="app-footer">
+    <div class="footer-social">
+      <a href="https://github.com/yashdotin"><i class="fa-brands fa-github"></i></a>
+      <a href="https://instagram.com/yash.awasthi.10"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/yash-awasthi-a7aa5b334"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://x.com/Yashjs10"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    <div class="footer-credit">Made with ❤️ by Yash</div>
+  </footer>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>
